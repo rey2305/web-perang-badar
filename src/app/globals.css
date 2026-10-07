@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #fbfaf7;
+  --card-bg: #ffffff;
+  --text-primary: #181716;
+  --text-muted: #66635f;
+  --accent-red: #b91c1c;
+  --accent-gold: #d97706;
+  --border-color: #e7e2d9;
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sticky Navbar Lengkap */
+.navbar-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(251, 250, 247, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.brand-badge {
+  background: var(--accent-red);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--accent-red);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-primary {
+  background-color: var(--text-primary);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Main Container Layout */
+.layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px 24px;
+}
+
+/* Hero Header */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fee2e2;
+  color: var(--accent-red);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Stats Counter Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+}
+
+.stat-item h4 {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--accent-red);
+}
+
+.stat-item p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.hero-img-box {
+  position: relative;
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+
+.hero-img-box img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Section Header */
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-head h2 {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  margin-top: 6px;
+}
+
+/* Chronology Interactive Timeline */
+.story-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 48px 32px;
+  margin-bottom: 80px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.timeline-horizontal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.timeline-card {
+  background: var(--bg-color);
+  padding: 24px;
+  border-top: 4px solid var(--accent-red);
+  border-radius: 8px;
+}
+
+.time-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.timeline-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.timeline-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Module Grid */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.card-img-wrapper {
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Quote Banner */
+.quote-banner {
+  background: var(--text-primary);
+  color: #fff;
+  padding: 50px 30px;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 80px;
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto 16px auto;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
